@@ -22,8 +22,8 @@ namespace ProductShop
                 x.AddProfile<ProductShopProfile>();
             });
             //
-            var usersXml =
-                File.ReadAllText("E:\\XML_Processing\\ProductShop - Skeleton\\ProductShop\\Datasets\\categories-products.xml");
+            //var usersXml =
+            //    File.ReadAllText("E:\\XML_Processing\\ProductShop - Skeleton\\ProductShop\\Datasets\\categories-products.xml");
             using (ProductShopContext context = new ProductShopContext())
             {
                 //context.Database.EnsureDeleted();
@@ -41,8 +41,7 @@ namespace ProductShop
              Select only their first and last name, age, count of sold products and for each product - name and price sorted by price (descending).*/
             var users = context
                 .Users
-                .Where(x => x.ProductsSold.Any())
-                .OrderByDescending(x => x.ProductsSold.Count)
+                .Where(x => x.ProductsSold.Any() && x.ProductsBought.Any())
                 .Select(x => new ExportUserAndProductDto
                 {
                     FirstName = x.FirstName,
@@ -61,12 +60,13 @@ namespace ProductShop
                     }
                     
                 })
+                .OrderByDescending(x => x.SoldProductDto.Count)
                 .Take(10)
                 .ToArray();
 
             var customExport = new ExportCustomUserProductDto
             {
-                Count = context.Users.Count(x => x.ProductsSold.Any()),
+                Count = context.Users.Where(x => x.ProductsSold.Any()).Count(),
                 ExportUserAndProductDto = users
             };
 

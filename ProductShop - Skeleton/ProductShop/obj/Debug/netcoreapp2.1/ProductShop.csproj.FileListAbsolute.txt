@@ -9,3 +9,14 @@ E:\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\Pro
 E:\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.AssemblyInfo.cs
 E:\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.dll
 E:\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.pdb
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.deps.json
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.runtimeconfig.json
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.runtimeconfig.dev.json
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.dll
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\bin\Debug\netcoreapp2.1\ProductShop.pdb
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.csprojAssemblyReference.cache
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.csproj.CoreCompileInputs.cache
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.AssemblyInfoInputs.cache
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.AssemblyInfo.cs
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.dll
+E:\XML_Processing\XML_Processing\ProductShop - Skeleton\ProductShop\obj\Debug\netcoreapp2.1\ProductShop.pdb

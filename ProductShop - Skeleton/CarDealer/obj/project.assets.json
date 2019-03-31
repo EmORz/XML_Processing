@@ -5350,11 +5350,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\XML_Processing\\ProductShop - Skeleton\\CarDealer\\CarDealer.csproj",
+      "projectUniqueName": "E:\\XML_Processing\\XML_Processing\\ProductShop - Skeleton\\CarDealer\\CarDealer.csproj",
       "projectName": "CarDealer",
-      "projectPath": "E:\\XML_Processing\\ProductShop - Skeleton\\CarDealer\\CarDealer.csproj",
+      "projectPath": "E:\\XML_Processing\\XML_Processing\\ProductShop - Skeleton\\CarDealer\\CarDealer.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\XML_Processing\\ProductShop - Skeleton\\CarDealer\\obj\\",
+      "outputPath": "E:\\XML_Processing\\XML_Processing\\ProductShop - Skeleton\\CarDealer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -5352,11 +5352,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\XML_Processing\\ProductShop - Skeleton\\ProductShop\\ProductShop.csproj",
+      "projectUniqueName": "E:\\XML_Processing\\XML_Processing\\ProductShop - Skeleton\\ProductShop\\ProductShop.csproj",
       "projectName": "ProductShop",
-      "projectPath": "E:\\XML_Processing\\ProductShop - Skeleton\\ProductShop\\ProductShop.csproj",
+      "projectPath": "E:\\XML_Processing\\XML_Processing\\ProductShop - Skeleton\\ProductShop\\ProductShop.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\XML_Processing\\ProductShop - Skeleton\\ProductShop\\obj\\",
+      "outputPath": "E:\\XML_Processing\\XML_Processing\\ProductShop - Skeleton\\ProductShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

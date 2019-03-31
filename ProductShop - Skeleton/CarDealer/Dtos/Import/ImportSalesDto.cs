@@ -6,7 +6,7 @@ namespace CarDealer.Dtos.Import
     public class ImportSalesDto
     {
         [XmlElement("carId")]
-        public int CarId { get; set; }
+        public int? CarId { get; set; }
 
         [XmlElement("customerId")]
         public int CustomerId { get; set; }

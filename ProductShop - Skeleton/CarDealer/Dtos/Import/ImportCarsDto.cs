@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using CarDealer.Models;
 
 namespace CarDealer.Dtos.Import
 {
@@ -15,7 +16,8 @@ namespace CarDealer.Dtos.Import
         public int TraveledDistance { get; set; }
 
         [XmlElement("parts")]
-        public int[] Parts { get; set; }
+        public PartsDto[] Parts { get; set; }
+
         /* <Car>
            <make>Opel</make>
            <model>Astra</model>
@@ -26,5 +28,12 @@ namespace CarDealer.Dtos.Import
            <partId id="72"/>
            </parts>
            </Car>*/
+    }
+
+    public class PartsDto
+    {
+
+        [XmlAttribute("partId id")]
+        public int PartId { get; set; }
     }
 }
