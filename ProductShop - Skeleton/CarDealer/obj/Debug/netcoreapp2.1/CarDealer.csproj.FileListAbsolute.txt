@@ -1,0 +1,11 @@
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.deps.json
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.runtimeconfig.json
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.runtimeconfig.dev.json
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.dll
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.pdb
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.csprojAssemblyReference.cache
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.csproj.CoreCompileInputs.cache
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfoInputs.cache
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfo.cs
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.dll
+E:\XML_Processing\ProductShop - Skeleton\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.pdb
