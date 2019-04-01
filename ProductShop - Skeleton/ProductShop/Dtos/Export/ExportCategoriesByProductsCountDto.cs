@@ -9,7 +9,7 @@ namespace ProductShop.Dtos.Export
         public string Name { get; set; }
 
         [XmlElement("count")]
-        public int Count { get; set; }
+        public int ProductCount { get; set; }
 
         [XmlElement("averagePrice")]
         public decimal AveragePrice { get; set; }

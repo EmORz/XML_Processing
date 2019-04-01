@@ -29,7 +29,7 @@ namespace ProductShop
                 //context.Database.EnsureDeleted();
                 //context.Database.EnsureCreated();
 
-                var data = GetUsersWithProducts(context);
+                var data = GetCategoriesByProductsCount(context);
                 Console.WriteLine(data);
             }
         }
@@ -41,7 +41,7 @@ namespace ProductShop
              Select only their first and last name, age, count of sold products and for each product - name and price sorted by price (descending).*/
             var users = context
                 .Users
-                .Where(x => x.ProductsSold.Any() && x.ProductsBought.Any())
+                .Where(x => x.ProductsSold.Any())
                 .Select(x => new ExportUserAndProductDto
                 {
                     FirstName = x.FirstName,
@@ -66,7 +66,7 @@ namespace ProductShop
 
             var customExport = new ExportCustomUserProductDto
             {
-                Count = context.Users.Where(x => x.ProductsSold.Any()).Count(),
+                Count = context.Users.Count(x => x.ProductsSold.Any()),
                 ExportUserAndProductDto = users
             };
 
@@ -92,16 +92,17 @@ namespace ProductShop
                 .Select(x => new ExportCategoriesByProductsCountDto
                 {
                     Name = x.Name,
-                    Count = x.CategoryProducts.Count,
+                    ProductCount = x.CategoryProducts.Count,
                     AveragePrice = x.CategoryProducts.Select(a => a.Product.Price).Average(),
-                    TotalRevenue = x.CategoryProducts.Select(s => s.Product.Price).Sum()
+                    TotalRevenue = x.CategoryProducts.Select(а => а.Product.Price).Sum()
                 })
-                .OrderByDescending(x => x.Count)
+                .OrderByDescending(x => x.ProductCount)
+                .ThenBy(x => x.TotalRevenue)
                 .ToArray();
 
 
 
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(ExportCategoriesByProductsCountDto[]), new XmlRootAttribute("Category"));
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(ExportCategoriesByProductsCountDto[]), new XmlRootAttribute("Categories"));
 
             var sb = new StringBuilder();
 
@@ -122,7 +123,10 @@ namespace ProductShop
            // Select the person's first and last name. For each of the sold products, select the product's name and price. Take top 5 records.
             var soldProducts = context
                 .Users
-                .Where(x => x.ProductsSold.Any())
+                .Where(x => x.ProductsSold.Count>0)
+                .OrderBy(l => l.LastName)
+                .ThenBy(f => f.FirstName)
+                .Take(5)
                 .Select(x => new ExportSoldProductsDto
                 {
                     FirstName = x.FirstName,
@@ -133,10 +137,8 @@ namespace ProductShop
                         Price = ps.Price
                     }).ToArray()
                 })
-                .OrderBy(l => l.LastName)
-                .ThenBy( f => f.FirstName)
-                .Take(5)
                 .ToArray();
+
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(ExportSoldProductsDto[]), new XmlRootAttribute("Users"));
 
             var sb = new StringBuilder();
@@ -145,11 +147,9 @@ namespace ProductShop
             {
                 new XmlQualifiedName("", ""),
             });
-
             xmlSerializer.Serialize(new StringWriter(sb), soldProducts, namespaces);
 
-
-            return sb.ToString().TrimEnd();
+            return sb.ToString().Trim();
             
         }
 
